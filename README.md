@@ -9,7 +9,7 @@ Compatible with Serverpod's official upload flow
 
 ```yaml
 dependencies:
-  serverpod_cloud_storage_cos: ^0.1.0
+  serverpod_cloud_storage_cos: ^0.1.4
 ```
 
 ## passwords.yaml

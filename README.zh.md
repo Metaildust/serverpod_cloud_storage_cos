@@ -8,7 +8,7 @@ Serverpod `CloudStorage` 接口的腾讯云 COS 实现。
 
 ```yaml
 dependencies:
-  serverpod_cloud_storage_cos: ^0.1.0
+  serverpod_cloud_storage_cos: ^0.1.4
 ```
 
 ## passwords.yaml 配置
