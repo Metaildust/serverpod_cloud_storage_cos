@@ -1,3 +1,0 @@
-dependency_overrides:
-  tencent_cos_dart:
-    path: ../tencent_cos_dart
