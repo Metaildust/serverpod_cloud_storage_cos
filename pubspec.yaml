@@ -1,0 +1,12 @@
+name: serverpod_cloud_storage_cos
+description: Tencent COS CloudStorage adapter for Serverpod.
+version: 0.1.1
+repository: https://github.com/Metaildust/gen
+
+environment:
+  sdk: ">=3.8.0 <4.0.0"
+
+dependencies:
+  http: ^1.6.0
+  serverpod: ">=3.0.0 <4.0.0"
+  tencent_cos_dart: ^0.1.0
