@@ -1,18 +1,20 @@
 # serverpod_cloud_storage_cos
 
-Tencent COS adapter for Serverpod `CloudStorage`.
-把腾讯云 COS 接入 Serverpod 官方 `CloudStorage` 接口的适配包。
+[中文文档](README.zh.md)
 
-Compatible with Serverpod official upload flow
+Tencent COS adapter for Serverpod `CloudStorage`.
+
+Compatible with Serverpod's official upload flow
 (`createDirectFileUploadDescription` / `FileUploader`).
-兼容 Serverpod 官方文件上传流程（`createDirectFileUploadDescription` / `FileUploader`）。
 
 ```yaml
 dependencies:
   serverpod_cloud_storage_cos: ^0.1.0
 ```
 
-## passwords.yaml / 配置
+## passwords.yaml
+
+Add COS credentials in `config/passwords.yaml`:
 
 ```yaml
 shared:
@@ -20,7 +22,7 @@ shared:
   tencentCosSecretKey: '<TENCENT_SECRET_KEY>'
   tencentCosBucket: '<COS_BUCKET_NAME>'
   tencentCosRegion: '<COS_REGION>'
-  tencentCosCustomDomain: 'https://my-cdn.example.com' # optional / 可选
+  tencentCosCustomDomain: 'https://my-cdn.example.com' # optional
 ```
 
 ## server.dart
@@ -37,6 +39,7 @@ void run(List<String> args) async {
   if (cosBucket == null || cosBucket.isEmpty) {
     throw StateError('tencentCosBucket must be configured in passwords.');
   }
+
   pod.addCloudStorage(
     cos.CosCloudStorage(
       serverpod: pod,
@@ -48,14 +51,13 @@ void run(List<String> args) async {
     ),
   );
 
-  // required / 必须
   cos.registerCosCloudStorageEndpoint(pod);
 
   await pod.start();
 }
 ```
 
-## Client usage / 客户端使用
+## Client usage
 
 ```dart
 final desc = await client.myEndpoint.getUploadDescription('path/to/file.png');
@@ -66,15 +68,13 @@ if (desc != null) {
 }
 ```
 
-## Notes / 说明
+## Notes
 - Uses Serverpod `CloudStorage` API.
-- Upload goes through Serverpod endpoint, then to COS.
-- 这是对 Serverpod 官方 `CloudStorage` 的兼容实现。
-- 上传会先到服务端上传端点，再写入 COS。
+- Upload goes through a Serverpod upload endpoint, then to COS.
 
-## Maintenance / 维护
+## Maintenance
 - Versioning: SemVer
 - Feedback: issue / PR
 
-## Reference / 参考
+## Reference
 - https://docs.serverpod.dev/concepts/file-uploads
