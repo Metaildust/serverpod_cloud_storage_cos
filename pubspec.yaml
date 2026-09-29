@@ -1,0 +1,12 @@
+name: serverpod_cloud_storage_cos
+resolution: workspace
+description: "DEPRECATED: use tencent_cos_cloud_storage_serverpod instead. Compatibility wrapper for the old package name."
+version: 0.1.6
+repository: https://github.com/Metaildust/serverpod_cloud_storage_cos
+homepage: https://pub.dev/packages/serverpod_cloud_storage_cos
+
+environment:
+  sdk: ">=3.8.0 <4.0.0"
+
+dependencies:
+  tencent_cos_cloud_storage_serverpod: ^0.2.0

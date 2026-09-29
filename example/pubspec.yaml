@@ -1,0 +1,9 @@
+name: serverpod_cloud_storage_cos_example
+publish_to: "none"
+environment:
+  sdk: ">=3.8.0 <4.0.0"
+
+dependencies:
+  serverpod: ">=3.0.0 <4.0.0"
+  serverpod_cloud_storage_cos:
+    path: ..
