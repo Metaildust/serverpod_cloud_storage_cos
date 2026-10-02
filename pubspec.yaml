@@ -9,4 +9,4 @@ environment:
   sdk: ">=3.8.0 <4.0.0"
 
 dependencies:
-  tencent_cos_cloud_storage_serverpod: ^0.2.0
+  tencent_cos_cloud_storage_serverpod: ^0.2.1

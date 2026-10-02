@@ -1,0 +1,9 @@
+name: tencent_cos_cloud_storage_serverpod_example
+publish_to: "none"
+environment:
+  sdk: ">=3.8.0 <4.0.0"
+
+dependencies:
+  serverpod: ">=3.4.1 <4.0.0"
+  tencent_cos_cloud_storage_serverpod:
+    path: ..
